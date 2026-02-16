@@ -79,7 +79,7 @@ const ContactSection: React.FC = () => {
     try {
       // Using Formspree as the functional endpoint
       // Users should replace 'mnnnyyzz' with their actual Formspree ID
-      const response = await fetch('https://formspree.io/f/mnnnyyzz', {
+      const response = await fetch('https://formspree.io/f/xwvnbvle', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
