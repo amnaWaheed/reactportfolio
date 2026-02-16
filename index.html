@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amna Waheed | Senior Full Stack Engineer</title>
+    
+    <!-- Tailwind CDN with Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              orange: {
+                50: '#fff7ed',
+                100: '#ffedd5',
+                200: '#fed7aa',
+                300: '#fdba74',
+                400: '#fb923c',
+                500: '#f97316',
+                600: '#ea580c',
+                700: '#c2410c',
+                800: '#9a3412',
+                900: '#7c2d12',
+                950: '#431407',
+              },
+            },
+            animation: {
+              'spin-slow': 'spin 12s linear infinite',
+              'bounce-slow': 'bounce-slow 5s ease-in-out infinite',
+              'float': 'float 4s ease-in-out infinite',
+            },
+            keyframes: {
+              'bounce-slow': {
+                '0%, 100%': { transform: 'translateY(0) scale(1)' },
+                '50%': { transform: 'translateY(-15px) scale(1.02)' },
+              },
+              'float': {
+                '0%, 100%': { transform: 'translate(0, 0)' },
+                '50%': { transform: 'translate(10px, -10px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Base styles to prevent flash of unstyled content */
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #020617;
+        margin: 0;
+        color: #cbd5e1;
+        overflow-x: hidden;
+      }
+      
+      h1, h2, h3, .font-heading {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      /* Hide root content until React is ready to avoid layout jumping */
+      #root:empty {
+        background: #020617;
+        height: 100vh;
+      }
+      
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .blob {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, rgba(249, 115, 22, 0) 70%);
+        border-radius: 50%;
+        filter: blur(80px);
+        z-index: -1;
+        animation: float-blob 20s infinite alternate ease-in-out;
+      }
+      
+      @keyframes float-blob {
+        0% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(10%, 10%) scale(1.1); }
+        66% { transform: translate(-5%, 15%) scale(0.9); }
+        100% { transform: translate(5%, -10%) scale(1); }
+      }
+      
+      .bg-grid {
+        background-image: linear-gradient(to right, #1e293b 1px, transparent 1px),
+                          linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+      }
+    </style>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "react-router-dom": "https://esm.sh/react-router-dom@^6.22.3"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#020617] text-slate-300 antialiased">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
