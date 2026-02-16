@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   const { getImage } = useImageStorage();
   const [imageError, setImageError] = useState(false);
   
-  const profileImg = getImage('profile', 'assets/profile.jpg') || 'assets/profile.jpg';
+  const profileImg = getImage('profile', 'images/profile.jpg') || 'images/profile.jpg';
   
   const resumePlaceholder = "data:application/pdf;base64,JVBERi0xLjcKMSAwIG9iagogIDw8IC9UeXBlIC9DYXRhbG9nIC9QYWdlcyAyIDAgUiA+PiBlbmRvYmogMiAwIG9iagogIDw8IC9UeXBlIC9QYWdlcyAvS2lkcyBbMyAwIFJdIC9Db3VudCAxID4+IGVuZG9iaiAzIDAgb2JqCiAgPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUgODQyXSAvUmVzb3VyY2VzIDw8ID4+ID4+IGVuZG9iagp0cmFpbGVyCiAgPDwgL1Ryb290IDEgMCBSID4+CJSVFT0Y=";
 
