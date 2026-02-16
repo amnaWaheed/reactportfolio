@@ -71,17 +71,17 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <p className="text-slate-500 text-sm font-medium">
               © {new Date().getFullYear()} All Rights Reserved. Built with React & Tailwind CSS.
             </p>
-            <button 
+            {/* <button 
               onClick={() => setIsCustomizerOpen(true)}
               className="inline-flex items-center gap-2 px-4 py-2 bg-[#1e293b] border border-slate-700 text-slate-400 hover:text-orange-400 hover:border-orange-500/30 rounded-full text-xs font-bold transition-all"
             >
               <Settings className="w-3.5 h-3.5" />
               Customize Portfolio Images
-            </button>
+            </button> */}
           </div>
         </div>
       </footer>
-      <ImageCustomizer isOpen={isCustomizerOpen} onClose={() => setIsCustomizerOpen(false)} />
+      {/* <ImageCustomizer isOpen={isCustomizerOpen} onClose={() => setIsCustomizerOpen(false)} /> */}
     </div>
   );
 };
